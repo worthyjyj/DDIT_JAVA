@@ -23,13 +23,12 @@ public class W02 {
 			case 9: case 10: case 11:
 				System.out.println(input+ "월은 가을입니다.");
 				break;
-			case 12: case 1: case2: 
+			case 12: case 1: case 2 : 
 				System.out.println(input+ "월은 겨울입니다.");
 			break;
 			default :
 				System.out.println(input+ "월은 잘못된 입력입니다.");
 			}
 		}while(input >=1 && input <= 12);
-
 				}
 }

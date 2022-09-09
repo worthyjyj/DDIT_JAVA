@@ -23,7 +23,7 @@ public class W03 {
 		System.out.println();
 		
 		if(avg >= 90) {
-			System.out.println("학점: A");
+			System.out.println("학점: \"A\"");
 		}else if(avg >= 80 && avg < 90) {
 			System.out.println("학점: B");
 		}else if(avg >=70 && avg < 80) {
