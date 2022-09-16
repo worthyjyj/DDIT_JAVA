@@ -3,12 +3,15 @@ package middleTest;
 import java.util.Random;
 import java.util.Scanner;
 
-public class 이영진 {
+public class 이영진_옵션 {
 
 	public static void main(String[] args) {
-//		1. 6명의 이름을 저장할 수 있는 변수 names를 선언 및 생성하고, 주변 친구들의 이름으로 초기화한다. (5점)
-
+		int input_final;
 		String[] names = { "김범수", "나얼", "박효신", "이수", "신용재", "하현우" };
+		
+		do {
+//		1. 6명의 이름을 저장할 수 있는 변수 names를 선언 및 생성하고, 주변 친구들의 이름으로 초기화한다. (5점)
+			
 
 //		2. 7과목의 이름을 저장할 수 있는 변수 subjects를 선언 및 생성하고, 국어, 영어, 수학, 사회, 과학, Java, Oracle로 초기화한다. (5점)
 
@@ -167,10 +170,35 @@ public class 이영진 {
 //		사용자가 학생 추가를 원한다면 학생의 이름을 입력받아 학생의 일곱 과목 점수를 랜덤으로 부여합니다.
 //		학생을 계속 입력할 것 인지 물어보고(y/n). 계속 입력을 받거나 중단합니다.
 //		새로 추가된 학생의 점수를 포함하여 계산된 총 출력을 다시 보여줍니다.
-
+		
 		Scanner sc = new Scanner(System.in);
+		System.out.println("원하는 옵션을 고르세요!");
+		System.out.print("1.학생추가 2.과목추가 3.정렬 4.점수수정 >> ");
+		int input = sc.nextInt();
+		String plusStu="";
+		boolean switch1 = false;
 		
 		
+		switch(input) {
+		case 1:
+			System.out.print("학생이름 >> ");
+			sc.nextLine();
+			plusStu = sc.nextLine();
+			switch1 = true;
+			
+		}
+		
+		if(switch1) {
+		String[] addStu = new String[names.length+1]; //names를 복사하고 마지막 인덱스에 입력값을 넣어준다. 
+		
+		//names를 복사
+		for(int i=0; i<names.length; i++) {
+			addStu[i]=names[i];
+		}
+		//마지막 인덱스에 입력값 넣어주기
+		addStu[addStu.length-1] = plusStu;
+		names = addStu;
+		}
 		
 		
 		
@@ -227,5 +255,7 @@ public class 이영진 {
 //		문제 풀이 완료 후 소스코드 전체를 복사하여 dditpsr@naver.com 으로 메일 본문에 붙여넣어 보내주세요.
 //		메일 제목은 '[초급자바 레벨테스트] 202209 이름'으로 합니다.
 //		본문 아래에 건의사항이나 요청사항, 도움사항 등 내용을 작성하셔도 좋습니다.
+		
+		}while(true);
 	}
 }

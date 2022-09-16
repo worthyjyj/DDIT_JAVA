@@ -27,3 +27,4 @@ public class W07 {
 System.out.println("게임을 종료합니다.");
 } 
 }
+
