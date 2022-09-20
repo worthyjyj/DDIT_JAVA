@@ -103,12 +103,28 @@ public class 재시험_이영진 {
 			}
 		}
 		
+		System.out.println("==================뀨==================");
 		
+		int cnt = 0;
+		for (int i = 0; i < 3; i++) { // 3줄
+			for (int j = cnt; j < 4+cnt; j++) {
+				if(j == student.length)
+					break;
+				System.out.print(student[j] + " ");
+			}
+			System.out.println();
+			for (int k = cnt; k < 4+cnt; k++) {
+				if(k == student.length)
+					break;
+				System.out.print(arr[k] + " ");
+			}
+			cnt+=4;
+			System.out.println();
+		}
 
 		// 제출 방법
 		// 재시험_오늘날짜_이름.txt
 		// wh-guswns123@hanmail.net 로 발송 고고
-
 	}
 
 }
