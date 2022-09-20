@@ -1,23 +1,25 @@
 package z_homework.work06;
 
 public class Plane {
- String manufacturer;
- String model; 
- int maxNumberOfPassengers;
- static int numberOfPlanes;
+ private String manufacturer;
+ private String model; 
+ private int maxNumberOfPassengers;
+ static private int numberOfPlanes=0;
  
- Plane(){
+ public Plane(){
 	 manufacturer="0";
 	 model="0";
 	 maxNumberOfPassengers=0;
-	 numberOfPlanes=0; 
+	 numberOfPlanes++; 
  }
  
- Plane(String manufacturer, String model, int maxNumberOfPassengers){
+public Plane(String manufacturer, String model, int maxNumberOfPassengers){
 	 this.manufacturer = manufacturer;
 	 this.model = model;
 	 this.maxNumberOfPassengers = maxNumberOfPassengers; 
+	 numberOfPlanes++; 
  }
+
  /**
   * set
   * @param a
@@ -53,11 +55,11 @@ public class Plane {
  }
  return this.maxNumberOfPassengers;
  }
- //여기서부터 모르겟음 
-// public int getNumberOfplanes() {
-//	 NumberOfplanes = //객체가 생성될 때마다 
-//	 return NumberOfplanes;
-// }
+ 
+ 
+ static public int getNumberOfplanes() {
+	 return numberOfPlanes;
+ }
  
  public static void main(String[] args) {
 	 Plane plane1 = new Plane("보잉", "보잉 747",450);
@@ -76,5 +78,6 @@ public class Plane {
 	 System.out.println("최대 승객수: "+plane3.getmaxNumberOfPassengers());
 	 System.out.println();
 	 
+	 System.out.println("생산된 비행기의 수: " + Plane.getNumberOfplanes());
  }
 }

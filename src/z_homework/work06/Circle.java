@@ -11,6 +11,7 @@ public class Circle {
 	public double getArea() {
 		return radius * radius * Math.PI;
 	}
+	
 	public double getradius() {
 		if(radius<0) {
 			radius = 0.0;
