@@ -1,6 +1,6 @@
 package z_homework_8_3;
 
-public class Book {
+public abstract class Book {
 	private int number; 
 	private String title; 
 	private String author; 
@@ -37,12 +37,21 @@ public class Book {
 		this.author = author;
 	}
 
-	public boolean equals(Object) {
-		if(this.title.equals(this.author))
+	public boolean equals(Object o) {
+		if(this.title.equals(o))
 			return true; 
 		else 
 			return false; 
 	}
+	
+	abstract int getLateFee(int lateDays); 
+	
+	
+	@Override
+	public String toString() {
+		return "관리번호 " + number + "번, 제목: " +title +", 작가: "+author+"(일주일 연체료: " + getLateFee(lateDays)
+	}
+	
 	
 	
 }
