@@ -11,10 +11,30 @@ public class ScanUtil {
 	}
 	
 	public static int nextInt() {
-		return Integer.parseInt(sc.nextLine());
+		int input = 0;
+		
+		while(true) {
+			try {
+				input = Integer.parseInt(sc.nextLine());
+				break; 
+			}catch(NumberFormatException e){
+				System.out.println("숫자를 입력해 주세요!");
+			}
+		}
+		return input; 
 	}
 	
 	public static double nextDouble() {
-		return Double.parseDouble(sc.nextLine());
+		double input = 0;
+		
+		while(true) {
+			try {
+				input = Double.parseDouble(sc.nextLine());
+				break; 
+			}catch(NumberFormatException e){
+				System.out.println("숫자를 입력해 주세요!");
+			}
+		}
+		return input; 
 	}
 }
