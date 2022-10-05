@@ -137,7 +137,7 @@ public class TV {
 		}else {
 			this.volume = a; 
 		}
-		showvolume1(); //볼륨 상자 출력 
+		showvolume(); //볼륨 상자 출력 
 		System.out.println();
 		System.out.println("현재 볼륨: " + getVolume());
 		menu();
@@ -155,7 +155,7 @@ public class TV {
 		}else {
 			this.volume = a; 
 		}
-		showvolume2();
+		showvolume();
 		System.out.println();
 		System.out.println("현재 볼륨: " + getVolume());
 		menu();
@@ -176,7 +176,7 @@ public class TV {
 		}
 	}
 	
-	public void showvolume1() {
+	public void showvolume() {
 		System.out.print("볼륨 ");
 		for(int i=0 ; i < this.volume; i++) {
 			System.out.print("■");
@@ -186,15 +186,6 @@ public class TV {
 			}
 		}
 	
-	public void showvolume2() {
-		System.out.print("볼륨 ");
-		for(int i=0 ; i < this.volume; i++) {
-			System.out.print("■");
-		}
-		for(int j=0; j<MAX_VOLUME-this.volume; j++) {
-				System.out.print("□");
-			}
-		}
 	
 
 	public boolean poweroff() {

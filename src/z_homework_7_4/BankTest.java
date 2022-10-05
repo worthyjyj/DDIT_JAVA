@@ -55,7 +55,5 @@ public class BankTest {
 				System.out.println();
 			}
 		}
-
 	}
-
 }

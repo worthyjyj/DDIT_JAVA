@@ -5,10 +5,8 @@ public class Car {
 	String color;
 	static final double MAX_SPEED = 200.0; // 상수선언
 
-	Car() {
-	};
 
-	Car(String color) {
+	public Car(String color) {
 		this.color = color;
 	}
 
@@ -33,10 +31,8 @@ public class Car {
 	}
 
 	public boolean speedUp(double speed) {
-		double tmp = this.speed; // 원래 속도 보관
 		double aaa = this.speed + speed;
 		if (aaa < 0 || aaa > MAX_SPEED) {
-			this.speed = tmp;
 			return false;
 		} else {
 			this.speed = aaa;

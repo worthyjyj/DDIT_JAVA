@@ -10,6 +10,7 @@ public class Circle {
 
 	public double getArea() {
 		return radius * radius * Math.PI;
+		//return Math.PI * Math.pow(this.radius,2);
 	}
 	
 	public double getradius() {
@@ -30,7 +31,7 @@ public class Circle {
 
 	public void setradius(double radius) {
 		if(radius<0) {
-			this.radius = 0.0;
+			this.radius = 0;
 		}
 		this.radius = radius;
 	}
@@ -45,7 +46,7 @@ public class Circle {
 
 	public static void main(String[] args) {
 		Circle circle1 = new Circle();
-		circle1.setradius(-5.0);
+		circle1.setradius(3.6);
 		circle1.setx(1.0);
 		circle1.sety(2.2);
 		

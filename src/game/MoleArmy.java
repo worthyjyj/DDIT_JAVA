@@ -12,8 +12,4 @@ public class MoleArmy {
 	this.att = att;
 	this.weapons = weapons;
 	}
-
-	public void info() {
-		
-	}
 }

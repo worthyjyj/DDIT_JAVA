@@ -2,14 +2,13 @@ package z_homework_8_3;
 
 public class Novel extends Book {
 	
-	public Novel(String ) {
-		// TODO Auto-generated constructor stub
+	public Novel(String title, String author) {
+		super(title, author);
 	}
 
 	@Override
 	int getLateFee(int lateDays) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return lateDays*300;
 	}
-
 }

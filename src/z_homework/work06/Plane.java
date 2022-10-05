@@ -1,15 +1,13 @@
 package z_homework.work06;
 
 public class Plane {
- private String manufacturer;
- private String model; 
- private int maxNumberOfPassengers;
- static private int numberOfPlanes=0;
+ private String manufacturer; //제작사
+ private String model; //비행기 모델명
+ private int maxNumberOfPassengers; //최대 승객수
+ private static int numberOfPlanes=0; //지금까지 생성된 비행기의 객체 수 
+ //객체가 생성될 때마다 생성자에서 증가시켜줌 
  
  public Plane(){
-	 manufacturer="0";
-	 model="0";
-	 maxNumberOfPassengers=0;
 	 numberOfPlanes++; 
  }
  

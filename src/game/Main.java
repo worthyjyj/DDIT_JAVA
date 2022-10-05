@@ -72,7 +72,7 @@ public class Main {
 	private void checkrank() {
 			System.out.println("-----------------------------------------------------------------");
 			System.out.printf("------------------------\"%s\"님의 기록 체크---------------\n",m.name);
-			for(int i=0; i<rank.length ;i++) {
+			for(int i=1; i<rank.length ;i++) {
 			System.out.printf ("  [%d]차 시도 :  타자력 %d \n",i,rank[i]                               );
 		}	
 			interFace2();
@@ -131,7 +131,7 @@ public class Main {
 	private void finalresult() {
 		if(m.def>0) {
 			System.out.println("====================================================================================================");
-			System.out.printf("%s을(를) 처치했습니다!!",ma3.name);
+			System.out.printf("%s을(를) 처치했습니다!!\n",ma3.name);
 			System.out.println("====================================================================================================");
 			System.out.println();
 			System.out.println("축하합니다!! 두더지 부대를 모두 혁파했습니다!!!!!!!!!!!!");
@@ -287,7 +287,7 @@ public class Main {
 				long afterTime = System.currentTimeMillis();
 				long secDiffTime = (afterTime - beforeTime)/1000;
 				
-				if(secDiffTime < 3) {
+				if(secDiffTime < 6) {
 					if(input.equals(w.weapons3[i])) {
 						System.out.println("====================================");
 						System.out.println("두더지를 잡아 +10 공격력 올랐습니다.");
@@ -303,7 +303,7 @@ public class Main {
 					}
 				}else {
 					System.err.println("===============시간초과===============");
-					System.err.println("두더지를 놓쳐 -2 방어력 잃었습니다.");
+					System.err.println("두더지를 놓쳐 -10 방어력 잃었습니다.");
 					System.err.println("====================================");
 					System.err.println();
 					m.def-=10;

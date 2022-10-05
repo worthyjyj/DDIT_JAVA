@@ -103,19 +103,19 @@ public class 재시험_이영진 {
 			}
 		}
 		
-		System.out.println("==================뀨==================");
+		System.out.println("==================선생님코드!!!!==================");
 		
 		int cnt = 0;
 		for (int i = 0; i < 3; i++) { // 3줄
 			for (int j = cnt; j < 4+cnt; j++) {
-				if(j == student.length)
-					break;
+				if(j == student.length) {
+					break;}
 				System.out.print(student[j] + " ");
 			}
 			System.out.println();
 			for (int k = cnt; k < 4+cnt; k++) {
-				if(k == student.length)
-					break;
+				if(k == student.length) {
+					break;}
 				System.out.print(arr[k] + " ");
 			}
 			cnt+=4;

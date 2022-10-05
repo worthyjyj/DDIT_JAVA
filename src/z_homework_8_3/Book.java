@@ -37,8 +37,12 @@ public abstract class Book {
 		this.author = author;
 	}
 
-	public boolean equals(Object o) {
-		if(this.title.equals(o))
+	public boolean equals(Object obj) {
+		String title = ((Book)obj).getTitle();
+		String author = ((Book)obj).getAuthor();
+		
+		
+		if(title.equals(this.title) && author.equals(this.author))
 			return true; 
 		else 
 			return false; 
@@ -49,7 +53,7 @@ public abstract class Book {
 	
 	@Override
 	public String toString() {
-		return "관리번호 " + number + "번, 제목: " +title +", 작가: "+author+"(일주일 연체료: " + getLateFee(lateDays)
+		return "관리번호 " + number + "번, 제목: " +title +", 작가: "+author+"(일주일 연체료: " + getLateFee(7)+"원)";
 	}
 	
 	

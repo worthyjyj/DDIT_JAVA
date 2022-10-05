@@ -1,14 +1,12 @@
 package z_homework.work06;
 
 public class NewCar {
-	double speed;
-	String color;
-	static final double MAX_SPEED = 200.0; // 상수선언
+	private double speed; //static으로 변수를 선언하면 한번 값이 저장되면 객체를 새로 생성해도 초기화없이 그 메모리에 저장됐던 값에서 시작된다.  
+	private String color;
+	private static final double MAX_SPEED = 200.0; // 상수선언
 
-	NewCar() {
-	};
 
-	NewCar(String color) {
+   	public NewCar(String color) {
 		this.color = color;
 	}
 

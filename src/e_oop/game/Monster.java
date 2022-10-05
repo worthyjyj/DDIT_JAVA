@@ -2,11 +2,8 @@ package e_oop.game;
 
 import java.util.Random;
 
-public class Monster {
-	String name; //케릭터의 이름
-	int maxHp, maxMp, hp, mp, att, def, exp;
-	//최대체력 , 최대마나, 현재체력, 현재마나, 공격력, 방어력,  획득 경험치
-	Item[] items; 
+public class Monster extends Status {
+	
 	
 	public Monster(String name, int maxHp, int maxMp, int att, int def, int exp, Item[] items) {
 		this.name = name;
@@ -18,7 +15,6 @@ public class Monster {
 		this.def = def;
 		this.exp = exp;
 		this.items = items; 
-
 	}
 
 	public void attack(Character c) {
@@ -35,6 +31,6 @@ public class Monster {
 	
 	
 	public Item dropItem() {
-		return items[new Random().nextInt(items.length)];
+		return items[new Random().nextInt(items.length)];	// 0-3 , idx = 1이 걸렸다 가정
 	}
 }

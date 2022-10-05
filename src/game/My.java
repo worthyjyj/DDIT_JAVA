@@ -16,5 +16,4 @@ public class My {
 		System.out.println("방어력 : " +this.def);
 		System.out.println("현재 레벨 : " + this.level);
 	} 
-
 }

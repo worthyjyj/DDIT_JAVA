@@ -1,10 +1,6 @@
 package e_oop.game;
 
-public class Character {
-	String name; //케릭터의 이름
-	int maxHp, maxMp, hp, mp, att, def, level, exp, nextExp; 
-	//최대체력 , 최대마나, 현재체력, 현재마나, 공격력, 방어력, 레벨, 현재경험치, 레벨업을 위한 경험치량 
-	Item[] inventory;
+public class Character extends Status {
 	
 	//생성자를 만들어 기본생성자가 자동 추가되는 것을 막음 
 	//-> 케릭터를 만들기 위해서는 반드시 케릭터명을 입력해야함 
@@ -19,7 +15,7 @@ public class Character {
 		this.level = 1;
 		this.exp = 0;
 		this.nextExp = this.level *100;
-		inventory = new Item[0];
+		items = new Item[0];
 	}
 
 
@@ -35,8 +31,8 @@ public class Character {
 		System.out.println ("-------------");
 		System.out.println ("----아이템----");
 		System.out.println ("-------------");	
-		for(int i=0; i < this.inventory.length; i++) {
-			System.out.println(this.inventory[i]);
+		for(int i=0; i < this.items.length; i++) {
+			System.out.println(this.items[i]);
 		}
 		System.out.println("-------------------");
 	}
@@ -77,15 +73,14 @@ public class Character {
 		System.out.println("LEVEL UP!!");
 	}
 
-
 	public void getItem(Item i) {
 		System.out.println(i.name + "을(를) 획득하였습니다.");
-		Item[] tmp = new Item[this.inventory.length+1];
-		for(int j = 0 ; j < this.inventory.length ; j++) {
-			tmp[j] = this.inventory[j];
+		Item[] tmp = new Item[this.items.length+1];	// length 1
+		for(int j = 0 ; j < this.items.length ; j++) {
+			tmp[j] = this.items[j];
 		}
 		tmp[tmp.length-1] = i; 
-		this.inventory = tmp;
+		this.items = tmp;	
 		
 		this.maxHp += i.maxHp;
 		this.maxMp += i.maxMp;
